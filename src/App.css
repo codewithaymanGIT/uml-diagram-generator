@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app h1 {
+  padding: 16px 24px;
+  background: #1e293b;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.canvas {
+  flex: 1;
+  position: relative;
+  background-color: #f1f5f9;
+  background-image: radial-gradient(circle, #cbd5e1 1px, transparent 1px);
+  background-size: 20px 20px;
+  overflow: hidden;
+}
+
+.class-box {
+  position: absolute;
+  width: 200px;
+  background: white;
+  border: 2px solid #334155;
+  border-radius: 6px;
+  cursor: move;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.class-box.selected {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.class-box-header {
+  background: #334155;
+  color: white;
+  padding: 8px 12px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 4px 4px 0 0;
+}
+
+.class-box-section {
+  padding: 6px 12px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+}
+
+.class-box-row {
+  padding: 2px 0;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: #1e293b;
+}
+
+.toolbar h1 {
+  padding: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.btn-add {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-add:hover {
+  background: #1d4ed8;
+}
+
+.workspace {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.canvas {
+  flex: 1;
+}
+.inspector {
+  width: 280px;
+  background: white;
+  border-left: 1px solid #e2e8f0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.inspector-empty {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.inspector-header {
+  margin-bottom: 20px;
+}
+
+.inspector-header label {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.inspector-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.inspector-section {
+  margin-bottom: 24px;
+}
+
+.inspector-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+
+.btn-mini {
+  background: none;
+  border: none;
+  color: #2563eb;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.inspector-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.inspector-row input {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  min-width: 0;
+}
+
+.type-input {
+  max-width: 80px;
+}
+
+.btn-remove {
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 4px;
+  width: 24px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-delete-class {
+  width: 100%;
+  padding: 10px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.btn-delete-class:hover {
+  background: #fecaca;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-connect, .btn-code {
+  background: #334155;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-connect.active {
+  background: #f59e0b;
+}
+
+.relationship-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.rel-delete-dot {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.rel-delete-x {
+  pointer-events: none;
+}
+
+.code-panel {
+  width: 380px;
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.code-panel-title {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #94a3b8;
+  margin-bottom: 16px;
+}
+
+.code-block {
+  background: #0f172a;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  white-space: pre;
+}
