@@ -276,3 +276,22 @@ body {
   font-size: 0.8rem;
   white-space: pre;
 }
+
+.student-credit {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-left: 16px;
+  font-weight: 400;
+}
+
+.toolbar-title {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.student-credit {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 400;
+}

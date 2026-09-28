@@ -86,7 +86,10 @@ function App() {
   return (
     <div className="app">
       <div className="toolbar">
-        <h1>UML Class Diagram Generator</h1>
+        <div className="toolbar-title">
+          <h1>UML Class Diagram Generator</h1>
+          <span className="student-credit">Mohammed Ayman Siddiqui · CS-H · Roll 13 · PRN 12414007</span>
+        </div>
         <div className="toolbar-actions">
           <button className="btn-add" onClick={addClass}>+ Add Class</button>
           <button
