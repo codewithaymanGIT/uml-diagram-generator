@@ -1,4 +1,4 @@
-# UML Class Diagram Generator
+﻿# UML Class Diagram Generator
 
 An interactive, browser-based tool for visually designing UML class diagrams and generating corresponding Java source code in real time.
 
@@ -30,3 +30,10 @@ An interactive, browser-based tool for visually designing UML class diagrams and
 npm install
 npm run dev
 ```
+
+## Screenshots
+
+![Diagram](screenshots/diagram.png)
+
+![Java code](screenshots/java-code.png)
+
